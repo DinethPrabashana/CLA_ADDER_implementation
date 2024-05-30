@@ -41,7 +41,7 @@ The sum bits are calculated using the propagate signals and the carry-in:
 Below is a block diagram of a 4-bit CLA adder:
 
 ![carry-lookahead-adder-4-bit](https://github.com/DinethPrabashana/CLA_ADDER_implementation/assets/143341376/b538d28f-4eb8-4544-91ad-c4e2e5691e56)
-ple.com/path/to/cla-diagram.png)
+
 
 ## Verilog Implementation
 click on the below link to more informative verilog code 
