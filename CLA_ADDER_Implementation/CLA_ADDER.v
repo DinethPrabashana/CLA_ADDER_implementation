@@ -20,22 +20,3 @@ module CLA(sum, c_out, c_in, a, b);
   assign c_out = (p3&((p2&p1&p0&c_in)|(p2&p1&g0)|(g1&p2)|g2))|g3 ;
 endmodule
 
-module stimulus; 
-  wire [3:0] SUM ;
-  wire C_OUT ;
-  reg [3:0] A, B ;
-  reg C_IN ;
-  wire [4:0] TSUM  = {C_OUT, SUM} ; // Implicit assignment
-  CLA  cla(SUM, C_OUT, C_IN, A, B);
-  initial 
-  begin 
-      // Initialize inputs A, B, and C_IN
-      A = 4'b0011 ;
-      B = 4'b0011 ;
-      C_IN = 1'b0 ;
-      // Display inputs A, B, outputs SUM, C_OUT, and TSUM
-      $monitor($time, " A = %b B = %b, SUM = %b, C_OUT = %b     TSUM = %b", A, B, SUM, C_OUT, TSUM);
-      // Change inputs after 5 time units
-      #5 A = 4'b1000; B = 4'b1000;
-  end 
-endmodule
