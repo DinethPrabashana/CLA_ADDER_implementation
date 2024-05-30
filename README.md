@@ -45,4 +45,4 @@ ple.com/path/to/cla-diagram.png)
 
 ## Verilog Implementation
 click on the below link to more informative verilog code 
-1. [CLA_ADDER](CLA_ADDER_implementation/CLA_ADDER)
+1. [CLA_ADDER](CLA_ADDER_Implementation/CLA_ADDER.v)
