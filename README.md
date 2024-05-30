@@ -13,23 +13,26 @@ The CLA adder speeds up the addition process by calculating the carry signals in
 - **Generate (G)**: A bit pair generates a carry if both bits are 1.
 - **Propagate (P)**: A bit pair propagates a carry if at least one bit is 1.
 
-### Generate and Propagate Formulas
+## Generate and Propagate Formulas
 
 For a given pair of bits \(a_i\) and \(b_i\):
-- Generate: \( G_i = a_i \cdot b_i \)
-- Propagate: \( P_i = a_i \oplus b_i \)
 
-### Carry Calculation
+- **Generate**: \( G_i = a_i \cdot b_i \)
+- **Propagate**: \( P_i = a_i \oplus b_i \)
+
+## Carry Calculation
 
 The carry-out of each bit is calculated using the generate and propagate signals:
+
 - \( C_0 = C_{\text{in}} \)
 - \( C_1 = G_0 + (P_0 \cdot C_0) \)
 - \( C_2 = G_1 + (P_1 \cdot G_0) + (P_1 \cdot P_0 \cdot C_0) \)
 - \( C_3 = G_2 + (P_2 \cdot G_1) + (P_2 \cdot P_1 \cdot G_0) + (P_2 \cdot P_1 \cdot P_0 \cdot C_0) \)
 
-### Sum Calculation
+## Sum Calculation
 
 The sum bits are calculated using the propagate signals and the carry-in:
+
 - \( S_i = P_i \oplus C_i \)
 
 ### Diagram of a 4-bit Carry Look-Ahead Adder
